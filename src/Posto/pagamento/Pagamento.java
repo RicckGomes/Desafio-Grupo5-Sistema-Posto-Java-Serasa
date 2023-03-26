@@ -28,14 +28,16 @@ public class Pagamento {
 				PagamentoDebito.debito(valorServico);
 			} else if (opcaoPagamento == 3) {
 				PagamentoCredito.credito(valorServico);
-			} else {
+			} else if (opcaoPagamento == 4) {
 				PagamentoDinheiro.dinheiro(valorServico);
+			} else {
+				System.out.println("A opção escolhida é inválida, por gentileza escolha uma opção válida!");
 			}
 			
-			System.out.println("Obrigado por escolher nossos serviços. Volte sempre!");
- 		 
 		} while (opcaoPagamento != 1 && opcaoPagamento != 2 && opcaoPagamento != 3 && opcaoPagamento != 4);
 	   
+		System.out.println("Obrigado por escolher nossos serviços. Volte sempre!");
+		
 		entrada.close();
 		
 	 }
